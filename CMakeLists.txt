@@ -9,3 +9,5 @@ add_executable(1.3 zestaw1/3.cpp)
 add_executable(1.4 zestaw1/4.cpp)
 add_executable(1.5 zestaw1/5.cpp)
 add_executable(1.6 zestaw1/6.cpp)
+
+add_executable(2.1 zestaw2/1.cpp)
