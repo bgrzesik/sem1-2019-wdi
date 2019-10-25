@@ -7,7 +7,8 @@
 // 2. Znaleźć wyrazy początkowe zamiast 1,1 o najmniejszej sumie, aby w ciągu analogicznym
 // do ciągu Fibonacciego wystąpił wyraz równy numerowi bieżącego roku.
 
-int main() {
+int main()
+{
 
     int a = 0;
     while (true) {

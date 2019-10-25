@@ -7,7 +7,8 @@
 
 // 6. Napisać program rozwiązujący równanie x^x=2019 metodą bisekcji.
 
-int main() {
+int main()
+{
     const int n = 2019;
 
 

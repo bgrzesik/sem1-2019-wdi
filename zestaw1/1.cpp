@@ -6,7 +6,8 @@
 
 // 1. Napisać program wypisujący elementy ciągu Fibonacciego mniejsze od miliona.
 
-int main() {
+int main()
+{
     int n = 1;
     int l = n;
 

@@ -6,7 +6,8 @@
 
 // 3. Napisać program sprawdzający czy istnieje spójny podciąg ciągu Fibonacciego o zadanej sumie.
 
-int main() {
+int main()
+{
     const int dsum = 555;
 
     int l = 0;
@@ -33,6 +34,6 @@ int main() {
         std::cout << "TAK" << std::endl;
     }
 
-    std::cout << n2 << ".." << n << " = " << n - n2 << "(" << dsum << ")"<< std::endl;
+    std::cout << n2 << ".." << n << " = " << n - n2 << "(" << dsum << ")" << std::endl;
 
 }
