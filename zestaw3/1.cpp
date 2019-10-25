@@ -5,6 +5,8 @@
 #include <iostream>
 #include <cmath>
 
+// 1. Napisać program zamieniający liczbę naturalną z systemu 10 na podstawę 2-16
+
 int main()
 {
     const int b = 10;
