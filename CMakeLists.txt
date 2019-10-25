@@ -11,3 +11,4 @@ add_executable(1.5 zestaw1/5.cpp)
 add_executable(1.6 zestaw1/6.cpp)
 
 add_executable(2.1 zestaw2/1.cpp)
+add_executable(2.2 zestaw2/2.cpp)
