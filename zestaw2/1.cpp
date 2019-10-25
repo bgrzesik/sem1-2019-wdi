@@ -5,6 +5,9 @@
 #include <iostream>
 #include <cmath>
 
+//1. Napisz program wczytujący liczbę naturalną z klawiatury i odpowiadający na pytanie,
+// czy liczba ta jest iloczynem dowolnych dwóch wyrazów ciągu Fibonacciego.
+
 int main()
 {
     const int n = 13 * 21;
