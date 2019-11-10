@@ -28,3 +28,6 @@ add_executable(3.5 zestaw3/5.cpp)
 add_executable(3.6 zestaw3/6.cpp)
 
 add_executable(4.1 zestaw4/1.cpp)
+
+add_executable(5.1 zestaw5/1.cpp)
+add_executable(5.2 zestaw5/2.cpp)
