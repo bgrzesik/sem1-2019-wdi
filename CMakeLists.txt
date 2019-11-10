@@ -31,3 +31,4 @@ add_executable(4.1 zestaw4/1.cpp)
 
 add_executable(5.1 zestaw5/1.cpp)
 add_executable(5.2 zestaw5/2.cpp)
+add_executable(5.3 zestaw5/3.cpp)
