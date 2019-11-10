@@ -175,7 +175,8 @@ int main()
     ulamek x, y;
 
     switch (rozwiaz_uklad(u, x, y)) {
-        case oznaczone:std::cout << "oznaczone" << std::endl;
+        case oznaczone:
+            std::cout << "oznaczone" << std::endl;
             std::cout << "x = ";
             wypisz(x);
             std::cout << std::endl;
@@ -184,10 +185,12 @@ int main()
             std::cout << std::endl;
             break;
 
-        case nieoznaczone:std::cout << "nieoznaczone" << std::endl;
+        case nieoznaczone:
+            std::cout << "nieoznaczone" << std::endl;
             break;
 
-        case sprzeczne:std::cout << "sprzeczne" << std::endl;
+        case sprzeczne:
+            std::cout << "sprzeczne" << std::endl;
             break;
 
     }
