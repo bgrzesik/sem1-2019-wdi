@@ -76,7 +76,7 @@ bool phase4(dane d, punkt p0, punkt p3)
 bool phase3(dane d, punkt p0, punkt p1, punkt p2)
 {
     for (int i = 0; i < d.n; ++i) {
-        if (d.t[i].x == p0.x & d.t[i].y == p0.y) {
+        if (d.t[i].x == p0.x && d.t[i].y == p0.y) {
             continue;
         }
         if (d.t[i].x == p1.x && d.t[i].y == p2.y) {
@@ -94,7 +94,7 @@ bool phase3(dane d, punkt p0, punkt p1, punkt p2)
 bool phase2(dane d, punkt p0, punkt p1)
 {
     for (int i = 0; i < d.n; ++i) {
-        if (d.t[i].x == p0.x & d.t[i].y == p0.y) {
+        if (d.t[i].x == p0.x && d.t[i].y == p0.y) {
             continue;
         }
         if (abs(p0.x - p1.x) == abs(d.t[i].y - p0.y) && phase3(d, p0, p1, d.t[i])) {
@@ -109,7 +109,7 @@ bool phase2(dane d, punkt p0, punkt p1)
 bool phase1(dane d, punkt p0)
 {
     for (int i = 0; i < d.n; ++i) {
-        if (d.t[i].x == p0.x & d.t[i].y == p0.y) {
+        if (d.t[i].x == p0.x && d.t[i].y == p0.y) {
             continue;
         }
         if (d.t[i].y == p0.y && phase2(d, p0, d.t[i])) {
