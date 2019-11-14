@@ -35,3 +35,5 @@ add_executable(5.3 zestaw5/3.cpp)
 add_executable(5.4 zestaw5/4.cpp)
 add_executable(5.5 zestaw5/5.cpp)
 add_executable(5.5_tablica_booli zestaw5/5_tablica_booli.cpp)
+
+add_executable(inne.quine inne/quine.cpp)
