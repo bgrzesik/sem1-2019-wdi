@@ -12,9 +12,14 @@ bool taki_sam(ulamek a, ulamek b)
     return a.l == b.l && a.m == b.m;
 }
 
-int maxCiagGeo(ulamek t[], int n)
+int liczbaPodciagow(int n)
 {
-    int max = 0;
+    return (n - 2) * (n - 1) / 2;
+}
+
+int policzCiagGeo(ulamek *t, int n)
+{
+    int l = 0;
 
     for (int i = 0; i < n - 1;) {
         int start = i++;
@@ -23,20 +28,15 @@ int maxCiagGeo(ulamek t[], int n)
 
         while (i < n && taki_sam(iloraz(t[i], t[i - 1]), ilo)) i++;
 
-        if (max < i - start) {
-            max = i - start;
-            if (i == n) {
-                max++;
-            }
-        }
+        l += liczbaPodciagow(i - start);
     }
 
-    return max;
+    return l;
 }
 
 int maxCiagAryt(ulamek t[], int n)
 {
-    int max = 0;
+    int l = 0;
 
     for (int i = 0; i < n - 1;) {
         int start = i++;
@@ -45,21 +45,16 @@ int maxCiagAryt(ulamek t[], int n)
 
         while (i < n && taki_sam(roznica(t[i], t[i - 1]), r)) i++;
 
-        if (max < i - start) {
-            max = i - start;
-            if (i == n) {
-                max++;
-            }
-        }
+        l += i - start;
     }
 
-    return max;
+    return l;
 
 }
 
 int garekLove(ulamek t[], int n)
 {
-    int maxGeo = maxCiagGeo(t, n);
+    int maxGeo = policzCiagGeo(t, n);
     int maxAryt = maxCiagAryt(t, n);
 }
 
@@ -94,7 +89,7 @@ int main()
 //    }
 
     std::cout << std::endl;
-    std::cout << maxCiagGeo(t, N) << std::endl;
+    std::cout << policzCiagGeo(t, N) << std::endl;
     std::cout << maxCiagAryt(t, N);
 
 }
