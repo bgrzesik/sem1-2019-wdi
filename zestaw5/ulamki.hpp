@@ -13,6 +13,9 @@ struct ulamek
 
 int nwd(int a, int b)
 {
+    a = abs(a);
+    b = abs(b);
+
     while (a != b && a != 0 && b != 0) {
         if (a > b) {
             a -= b;
