@@ -38,3 +38,8 @@ add_executable(5.5_tablica_booli zestaw5/5_tablica_booli.cpp)
 
 add_executable(inne.quine inne/quine.cpp)
 add_executable(inne.obfuscated_max inne/obfuscated_max.c)
+add_executable(inne.calc inne/calc.cpp)
+add_executable(inne.conv inne/conv.cpp)
+add_executable(inne.sort inne/sort.cpp)
+add_executable(inne.std_madness inne/std_madness.cpp)
+add_executable(inne.fib inne/fib.cpp)
