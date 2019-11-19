@@ -15,6 +15,10 @@
 
 int waga(int n)
 {
+
+    if (n == 0) {
+        return 0;
+    }
     int dzielnik = 2;
 
     int c = n % 2 == 0 ? 1 : 0;
