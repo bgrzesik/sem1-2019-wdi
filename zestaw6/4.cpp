@@ -41,26 +41,19 @@ int waga(int n, int d)
 
 bool mozna(int t[], int n)
 {
-    int wagi[3] = { 0, 0, 0 };
-    int i_waga = 0;
+    int wagi[3] = { -1, -1, -1 };
 
     for (int i = 1; i < n; ++i) {
         int c_waga = waga(t[i], 2);
 
         int w = 0;
-        while (wagi[w] != c_waga) {
-            if (w == 3) {
-                return false;
-            }
+        while ((wagi[w] != c_waga && wagi[w] != -1) && ++w < 3);
 
-            if (w == i_waga) {
-                wagi[w] = c_waga;
-                i_waga++;
-                break;
-            }
-
-            w++;
+        if (w == 3) {
+            return false;
         }
+
+        wagi[w] = c_waga;
     }
     return true;
 }
@@ -74,7 +67,8 @@ int main()
     std::cout << "waga(30) = " << waga(30, 2) << " (=3)" << std::endl;
     std::cout << "waga(64) = " << waga(64, 2) << " (=1)" << std::endl;
 
-    int liczby[] = { 2, 6, 30, 64, 1 };
+
+    int liczby[] = { 2, 2 * 3, 2 * 3 * 5, 2, 1 };
     std::cout << mozna(liczby, 4) << std::endl;
     //int liczby2[] = { 2, 6, 30, 64, 1 };
     std::cout << mozna(liczby, 5) << std::endl;
