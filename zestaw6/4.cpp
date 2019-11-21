@@ -39,23 +39,28 @@ int waga(int n, int d)
     return r + waga(n, d);
 }
 
-bool mozna(int t[], int n)
+bool recur(int wagi[], int n, int i, int p1, int p2, int p3)
 {
-    int wagi[3] = { -1, -1, -1 };
-
-    for (int i = 1; i < n; ++i) {
-        int c_waga = waga(t[i], 2);
-
-        int w = 0;
-        while ((wagi[w] != c_waga && wagi[w] != -1) && ++w < 3);
-
-        if (w == 3) {
-            return false;
-        }
-
-        wagi[w] = c_waga;
+    if (n == i) {
+        return p1 == p2 && p2 == p3;
     }
-    return true;
+
+    return recur(wagi, n, i + 1, p1 + wagi[i], p2, p3) ||
+           recur(wagi, n, i + 1, p1, p2 + wagi[i], p3) ||
+           recur(wagi, n, i + 1, p1, p2, p3 + wagi[i]);
+}
+
+template<int n>
+bool mozna(int t[n])
+{
+    int wagi[n];
+    int sum = 0;
+
+    for (int i = 0; i < n; ++i) {
+        sum += wagi[i] = waga(n, 2);
+    }
+
+    return recur(wagi, n, 0, 0, 0, 0);
 }
 
 
@@ -67,9 +72,8 @@ int main()
     std::cout << "waga(30) = " << waga(30, 2) << " (=3)" << std::endl;
     std::cout << "waga(64) = " << waga(64, 2) << " (=1)" << std::endl;
 
-
-    int liczby[] = { 2, 2 * 3, 2 * 3 * 5, 2, 1 };
-    std::cout << mozna(liczby, 4) << std::endl;
+    int liczby[] = { 3 * 11, 3 * 5, 7 * 2, 2, 7, 4, 0 };
+    std::cout << mozna<6>(liczby) << std::endl;
     //int liczby2[] = { 2, 6, 30, 64, 1 };
-    std::cout << mozna(liczby, 5) << std::endl;
+    std::cout << mozna<7>(liczby) << std::endl;
 }
