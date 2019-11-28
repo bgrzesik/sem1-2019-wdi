@@ -91,9 +91,9 @@ int main()
     chessboard board;
     memset(&board, 0, sizeof(board));
 
-    board.fields[2][2] = 1;
+    board.fields[7][7] = 1;
 
-    if (chess_puzzle(board, { 2, 2 }, 1)) {
+    if (chess_puzzle(board, { 7, 7 }, 1)) {
         print_chess(board);
     }
 
