@@ -42,6 +42,7 @@ add_executable(6.4 zestaw6/4.cpp)
 
 add_executable(7.5 zestaw7/5.cpp)
 add_executable(7.6 zestaw7/6.cpp)
+add_executable(7.7 zestaw7/7.cpp)
 add_executable(7.14 zestaw7/14.cpp)
 
 add_executable(inne.quine inne/quine.cpp)
