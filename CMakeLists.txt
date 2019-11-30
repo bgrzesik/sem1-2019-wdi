@@ -46,6 +46,7 @@ add_executable(7.7 zestaw7/7.cpp)
 add_executable(7.8 zestaw7/8.cpp)
 add_executable(7.14 zestaw7/14.cpp)
 
+add_executable(inne.det inne/det.cpp)
 add_executable(inne.quine inne/quine.cpp)
 add_executable(inne.obfuscated_max inne/obfuscated_max.c)
 add_executable(inne.calc inne/calc.cpp)
