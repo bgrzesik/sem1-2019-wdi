@@ -9,14 +9,7 @@
 template<int N>
 int det(int mat[N][N], bool col[N], bool row[N], int n = N)
 {
-    /*
-        | ...       |
-        | a0 ... a1 |
-        | ...   ... |
-        | a2 ... a3 |
-        | ...       |
-     */
-    if (n == 2) {
+    if (n == 1) {
         int x = 0;
         int y = 0;
 
@@ -27,24 +20,7 @@ int det(int mat[N][N], bool col[N], bool row[N], int n = N)
             throw 10;
         }
 
-        int a0 = mat[y][x];
-        int x0 = x++;
-
-        while (x < N && col[x]) { x++; }
-        int a1 = mat[y++][x];
-
-        while (y < N && row[y]) { y++; }
-        int a3 = mat[y][x];
-
-        int a2 = mat[y][x0];
-
-        int det = a0 * a3 - a1 * a2;
-
-        printf("| %d %d |\n", a0, a1);
-        printf("| %d %d |\n", a2, a3);
-        printf("  = %d\n", det);
-
-        return det;
+        return mat[y][x];
     }
 
     int sum = 0;
@@ -74,18 +50,6 @@ int det(int mat[N][N], bool col[N], bool row[N], int n = N)
     }
     row[y] = false;
 
-    for (int y = 0; y < N; ++y) {
-        if (row[y]) continue;
-
-        printf("|");
-        for (int x = 0; x < N; ++x) {
-            if (col[x]) continue;
-
-            printf(" %d ", mat[y][x]);
-        }
-        printf("|\n");
-    }
-    printf(" = %d\n", sum);
 
     return sum;
 }
@@ -112,7 +76,7 @@ int main()
     bool col3[3] { false, false, false };
     bool row3[3] { false, false, false };
 
-    std::cout << det<3>(mat3, col3, row3);
+    std::cout << det<3>(mat3, col3, row3) << std::endl;
 
     {
         int mat4[4][4] = {
