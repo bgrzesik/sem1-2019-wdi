@@ -20,6 +20,9 @@ void init(node **node)
 
 int value(node *n, int idx)
 {
+    if (n == nullptr) {
+        return 0;
+    }
     while (n->idx < idx and n->next != nullptr) {
         n = n->next;
     }
