@@ -49,6 +49,10 @@ add_executable(7.14 zestaw7/14.cpp)
 add_executable(9.1 zestaw9/1.cpp)
 add_executable(9.2 zestaw9/2.cpp)
 
+add_executable(10.3 zestaw10/3.cpp)
+add_executable(10.4 zestaw10/4.cpp)
+add_executable(10.5 zestaw10/5.cpp)
+
 
 add_executable(14.15.1.a.1 kolokwia/14.15.1.a.1.cpp)
 add_executable(14.15.1.a.2 kolokwia/14.15.1.a.2.cpp)
