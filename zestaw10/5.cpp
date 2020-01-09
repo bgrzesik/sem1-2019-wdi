@@ -63,9 +63,7 @@ void mangle(node **pn)
 
     for (int i = 0; i < 10; ++i) {
         p->next = splits[i];
-        while (p->next != nullptr) {
-            p = p->next;
-        }
+        p = splits_next[i];
     }
 
     *pn = w.next;
