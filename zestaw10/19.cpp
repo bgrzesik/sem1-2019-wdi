@@ -37,6 +37,7 @@ int main(int argc, const char *argv[])
     d.next = &e;
     e.next = &f;
     f.next = &c;
+    f.next = &c;
 
     std::cout << is_cyclic(&a) << std::endl;
 
